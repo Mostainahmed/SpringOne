@@ -18,8 +18,15 @@
     	class="com.mostain.springdemo.HappyFortuneService">
     </bean>
  	
- 	<bean id="myCoach"
+<!-- 	
+	<bean id="myCoach"
  		class="com.mostain.springdemo.BaseballCoach">
+ 			<constructor-arg ref="myFortuneService" />	 		
+ 	</bean>
+-->
+ 	
+ 	<bean id="myCoach"
+ 		class="com.mostain.springdemo.TrackCoach">
  			<constructor-arg ref="myFortuneService" />	 		
  	</bean>
 
