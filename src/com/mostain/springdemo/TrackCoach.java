@@ -14,7 +14,7 @@ public class TrackCoach implements Coach {
 
 	@Override
 	public String getDailyFortune() {
-		return "Allahu Akber,"+" "+fortuneService.getFortune();
+		return "Assalamualaikum,"+" "+fortuneService.getFortune();
 	}
 
 }

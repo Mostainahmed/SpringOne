@@ -10,8 +10,8 @@
 	
     <!-- Define your beans here -->
     <bean id="myLoggerConfig" class="com.mostain.springdemo.MyLoggerConfig" init-method="initLogger">
-    	<property name="rootLoggerLevel" value="FINEST" />
-    	<property name="printedLoggerLevel" value="FINEST"/>
+    	<property name="rootLoggerLevel" value="FINE" />
+    	<property name="printedLoggerLevel" value="FINE"/>
     </bean>
     
     <bean id="myFortuneService"
@@ -29,6 +29,15 @@
  		class="com.mostain.springdemo.TrackCoach">
  			<constructor-arg ref="myFortuneService" />	 		
  	</bean>
+ 	
+ 	<bean id="myCricketCoach"
+		 class="com.mostain.springdemo.CricketCoach">
+		 <!-- set up setter injection-->
+		 <property name="fortuneService" ref="myFortuneService" />
+		 <!-- inject literal values-->
+		 <property name="emailAddress" value="demo@cc.com"></property>
+		 <property name="team" value="BD CRIC Club"></property>
+	 </bean>
 
 </beans>
 
